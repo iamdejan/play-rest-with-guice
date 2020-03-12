@@ -1,6 +1,7 @@
 package controllers;
 
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import play.mvc.Controller;
 import play.mvc.Result;
 import repositories.PersonRepository;
@@ -14,7 +15,7 @@ public class HomeController extends Controller {
     private PersonRepository personRepository;
 
     @Inject
-    public HomeController(PersonRepository personRepository) {
+    public HomeController(@Named("xxx") PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
 
